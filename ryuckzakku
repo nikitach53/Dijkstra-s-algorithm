@@ -1,0 +1,22 @@
+w = [30, 20, 15]
+p = [3000, 2000, 1500]
+C = 35
+def select_value(C,w,p):
+    number = len(w)
+    status = [0] * number
+    load_w = 0
+    total_v = 0 
+    argsort_p = sorted(range(number), key=lambda k :p[k], reverse =True)
+    for i in range(number):
+        if w[argsort_p[i]] > C:
+            continue
+        load_w += w[argsort_p[i]]
+        total_v += p[argsort_p[i]]
+        status[argsort_p[i]] = 1
+        
+        C -= w[argsort_p[i]]
+    return status, total_v, load_w
+status, total_v, load_w = select_value(C, w ,p)
+print(status)
+print(total_v)
+print(load_w)
