@@ -1,0 +1,13 @@
+w = [30, 20, 15]
+c = 35
+def alg(w,c):
+    lw = 0 #сколько веса мы задействуем сейчас 
+    for i in range(len(w)): # проверем каждое значение из w по индексу
+        if w[i] > c: # если 1 значение больше C то продолжаем 
+            continue
+        lw += w[i]
+        c -= w[i]
+    return lw
+lw = alg(w, c)
+print(lw)
+print(": " + str(lw*100))
