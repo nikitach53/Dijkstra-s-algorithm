@@ -20,14 +20,13 @@ graph["d"]["fin"] = 1
  
 graph["fin"] = {}        #Конечный узел не имеет соседей
 
-infinity = float("inf")  #Начальное заполнение значений для всех узлов графа
-costs = {}               #По началу они все должны иметь признак того, что в них еще не заходили.
-costs = {"start":0,
-         'a':infinity,
-         'b':infinity,
-         'c':infinity,
-         'd':infinity,
-         'fin':infinity}
+infinity = float("inf")
+costs = {}
+costs["a"] = 5
+costs["b"] = 2
+costs["c"] = infinity
+costs["d"] = infinity
+costs["fin"] = infinity
 
 parents = {}
 parents["a"] = "start"
