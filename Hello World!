@@ -1,7 +1,0 @@
-#include <iostream> // подключение библиотеки, для возможности вывода в консоль
-using namespace std; // указание пространства имён, для кода ниже
-void main()
-{
-	setlocale(LC_ALL, "Rus"); //делает расшифровку для русских символов
-	cout << "Hello World!"; //выводим: Hello World!
-	}
